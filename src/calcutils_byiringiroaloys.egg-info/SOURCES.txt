@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+src/calcutils/_init_.py
+src/calcutils/operations.py
+src/calcutils_byiringiroaloys.egg-info/PKG-INFO
+src/calcutils_byiringiroaloys.egg-info/SOURCES.txt
+src/calcutils_byiringiroaloys.egg-info/dependency_links.txt
+src/calcutils_byiringiroaloys.egg-info/top_level.txt
