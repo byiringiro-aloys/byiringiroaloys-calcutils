@@ -1,6 +1,6 @@
 [build-system]
-requires=["setuptools>=61.0.0"]
-setup-backend="setuptools.build_meta"
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
 
 
 [project]
@@ -16,9 +16,9 @@ classifiers=[
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent"
 ]
-requires-python= ">=3.8"
-dependencies=[]
+requires-python = ">=3.8"
+dependencies = []
 
 
 [project.urls]
-Homepage="https://github.com/byiringiro-aloys/byiringiroaloys-calcutils"
+Homepage = "https://github.com/byiringiro-aloys/byiringiroaloys-calcutils"
