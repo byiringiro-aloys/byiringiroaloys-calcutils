@@ -8,6 +8,12 @@ A simple Python math utility package providing basic arithmetic and statistical 
 
 ---
 
+## Package on TestPyPI
+
+![Package on TestPyPI](resources/package_preview_site.png)
+
+---
+
 ## Installation
 
 Install from TestPyPI using pip:
@@ -16,32 +22,18 @@ Install from TestPyPI using pip:
 pip install -i https://test.pypi.org/simple/ calcutils-byiringiroaloys
 ```
 
-![Package on TestPyPI](resources/package_preview:site.png)
-
 ![Installation](resources/package_installation.png)
 
 ---
 
 ## Usage
 
-> **Note:** The install name (`calcutils-byiringiroaloys`) and the import name (`calcutils`) are different.
+> **Note:** The install name is `calcutils-byiringiroaloys` but you import from `calcutils.operations`.
 
-### Import the package
-
-```python
-import calcutils
-```
-
-Or import specific functions directly:
+All functions are available via `calcutils.operations`:
 
 ```python
-from calcutils import add, subtract, multiply, divide, average
-```
-
-Or import from the module itself:
-
-```python
-from calcutils.operations import add, divide
+from calcutils.operations import add, subtract, multiply, divide, average
 ```
 
 ---
@@ -52,61 +44,48 @@ from calcutils.operations import add, divide
 Returns the sum of two numbers.
 
 ```python
-from calcutils import add
+from calcutils.operations import add
 
-result = add(5, 3)
-print(result)  # 8
+print(add(5, 3))  # 8
 ```
-
----
 
 ### `subtract(big_num1, small_num2)`
 Returns the difference between two numbers.
 
 ```python
-from calcutils import subtract
+from calcutils.operations import subtract
 
-result = subtract(10, 4)
-print(result)  # 6
+print(subtract(5, 3))  # 2
 ```
-
----
 
 ### `multiply(num1, num2)`
 Returns the product of two numbers.
 
 ```python
-from calcutils import multiply
+from calcutils.operations import multiply
 
-result = multiply(3, 7)
-print(result)  # 21
+print(multiply(5, 3))  # 15
 ```
-
----
 
 ### `divide(num1, num2)`
 Returns the result of dividing `num1` by `num2`.  
-Returns an error string if `num2` is zero — it does **not** raise an exception.
+Returns an error string if `num2` is zero — does **not** raise an exception.
 
 ```python
-from calcutils import divide
+from calcutils.operations import divide
 
-print(divide(10, 2))   # 5.0
-print(divide(5, 0))    # Error: Can not divide by Zero.
+print(divide(10, 2))  # 5.0
+print(divide(5, 0))   # Error: Can not divide by Zero.
 ```
-
----
 
 ### `average(numbers)`
 Returns the arithmetic mean of a list of numbers. Returns `0.0` for an empty list.
 
 ```python
-from calcutils import average
+from calcutils.operations import average
 
-result = average([1, 2, 3, 4, 5])
-print(result)  # 3.0
-
-print(average([]))  # 0.0
+print(average([1, 2, 3, 4, 5]))  # 3.0
+print(average([]))               # 0.0
 ```
 
 ---
@@ -114,25 +93,15 @@ print(average([]))  # 0.0
 ## Example
 
 ```python
-from calcutils import add, subtract, multiply, divide, average
+from calcutils.operations import add, subtract, multiply, divide
 
-print("Addition:", add(5, 3))           # 8
-print("Subtraction:", subtract(10, 4))  # 6
-print("Multiplication:", multiply(3, 7))# 21
-print("Division:", divide(10, 2))       # 5.0
-print("Division by zero:", divide(5, 0))# Error: Can not divide by Zero.
-print("Average:", average([1, 2, 3]))   # 2.0
+print("Addition of 5 and 3:", add(5, 3))
+print("Subtraction of 5 and 3:", subtract(5, 3))
+print("Multiplication of 5 and 3:", multiply(5, 3))
+print("Division of 5 and 0:", divide(5, 0))
 ```
 
 ![Package execution](resources/package_execution.png)
-
----
-
-## Notes
-
-- All arithmetic functions (`add`, `subtract`, `multiply`, `divide`) accept two numbers (int or float).
-- `divide` handles zero division gracefully by returning an error string rather than raising an exception.
-- `average` accepts a list of numbers of any length.
 
 ---
 
